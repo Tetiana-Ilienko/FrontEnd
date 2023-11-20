@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Pirates recruiting campain</title>
+</head>
+<body>
+    <form action="./greetings.html" method="get">
+    <label for="private-name">Ваше пиратское имя</label>
+    <input 
+      type="text" 
+      id="private-name"
+      placeholder="введите ваше имя" 
+      name="name" 
+      required
+    >
+    <label for="birth-date">Дата рождения</label>
+    <input 
+        type="date" 
+        id="birth-date" 
+        placeholder="дата рождения" 
+        name="birth-date"
+        required
+    >
+    <label for="flag-color">Цвет пираткого флага</label>
+    <input 
+       type="color"
+       id="flag-color"
+        name="flagColor"
+    >
+    <br>
+    <label for="saber-input">сабля</label>
+    <input 
+        type="radio"
+        id="saber-input"
+        name="weapon"
+        value="saber">
+        <br>
+    <label for="pistol-input">пистолет</label>
+    <input 
+        type="radio"
+        id="pistol-input"
+        name="weapon"
+        value="pistol"
+        checked
+    >
+    <br>
+    <fieldset>
+        <label>Контрабанда:</label>
+        
+        <input 
+           type="checkbox" 
+           name="alcohol" 
+           value="rum"
+           id="alcohol" 
+        >
+        <label for="alcohol">Ром</label>
+        
+        <input 
+           type="checkbox" 
+           name="cigars" 
+           value="cuban"
+           id="cigars" 
+        >
+        <label for="cigars">Кубинские сигары</label>
+    </fieldset>
+
+    <select name="numberOfLegs" id="legsInput">
+        <option value="2">Две ноги</option>
+        <option value="1" selected>Одна нога</option>
+        <option value="0" disabled>Обе ноги - деревяшки</option>
+    </select>
+
+
+    <button type="submit" class="btn-become-pi">Стать пиратом</button>
+</form>
+</body>
+</html>

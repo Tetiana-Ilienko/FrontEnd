@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.composition {
+    width: 600px;
+    height: 400px;
+    background-image: url("img/bg.jpg");
+}

@@ -1,0 +1,22 @@
+.btn-become-pi{
+    color: aliceblue;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    &:hover{
+        background-color: red;
+      }
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 300px;
+}
+br{
+    display: none;
+}

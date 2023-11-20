@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <title>HomeWork bankAccount</title>
+</head>
+<body>
+    <section id ="create">
+        <label for="name">Name</label>
+        <input id="name"   type="text">
+        <button onclick="createAccount()">Create new account</button>
+        <button onclick="showAccounts()">Show info about all accounts</button>
+
+    </section>
+    <section id ="show">
+        <ol id="accountList"></ol>
+        
+    </section>
+    <section id ="change">
+        <label for="accountId">Account ID</label>
+        <input type="text" id="accountId">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount">
+        <button id="withdraw">Withdraw</button>
+        <button id="deposit">Deposit</button>
+
+    </section>
+    
+</body>
+</html>

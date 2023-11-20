@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Google finder</title>
+</head>
+<body>
+     <!-- 
+    Query params:
+  ?имяИнпута=введенноеЗначение&имяСледующегоИнпута=введенноеЗначение
+  если значение содержало пробелы - то в URL вместо них будут подставлены +
+    URL - uniform resource locator -  уникальный локатор ресурсов
+    https://zoom.us:3000/meeting/schedule?name=Vlad#best
+      https или http - scheme, protocol
+      zoom.us - domen - домен 
+      3000 - port - номер порта
+      /meeting/schedule - path - путь
+      ?name=Vlad - parameters - query params - парметры запроса
+      #best - anchor - якорь
+  -->
+    <h1>Google finder</h1>
+    <!-- action, 
+    ver1 указали путь other.html
+    ver2 https://www.google.com/search
+    
+    При get запросе поля отправляются в виде params
+    В post запросе информация пользователя будет отправлена 
+    внутри тела запроса.
+
+  -->
+    <form action="https://www.google.com/search" method="get">
+        <label for="search-query-input">Ваш поисковый запрос</label>
+       <input type="text" id="search-query-input" name="q">  <!-- запрос на гугл -->
+        <button type="submit">Search</button>
+    </form>
+    
+</body>
+</html>
