@@ -15,3 +15,18 @@ function getFiveAfterSevenSec(){
 };
 
 let res = getFiveAfterSevenSec();
+
+// PROMISE
+
+let promise =new Promise(function (resolve,reject) { //  удачноу завершение промиса
+    setTimeout(() => resolve(5) , 7000);
+    reject(new Error('Some error'));
+
+});
+
+
+
+promise.then(value => value +5)
+        .then(newValue => console.log(newValue))
+        .catch(error => console.log(error)
+        .finally(console.log('Напечатает текст при любом исходе')))
