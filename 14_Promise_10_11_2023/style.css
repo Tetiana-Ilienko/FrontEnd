@@ -1,0 +1,9 @@
+
+.li , #userDetails{
+    border: 1px solid black;
+    padding-left: 15px;
+}
+
+.li{
+    cursor: pointer;
+}
