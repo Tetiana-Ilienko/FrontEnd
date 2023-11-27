@@ -9,16 +9,28 @@ const ToDoList = () => {
         setTaskList((prev) => [...prev, task]);
         setTask ('');
 
-
     }
 
     const handleChangeTask =(e: ChangeEvent<HTMLInputElement>): void => {
         setTask(e.target.value);
         
-        
-
-
     }
+
+    const handleDeleteTask = (index :any) : void => { // ???  как правильно задать тип(почему number  не подходит)
+        const copyTaskList = [...taskList];
+        copyTaskList.splice(index,1);
+        setTaskList(copyTaskList)
+        
+    }
+
+    const handleStrikeText = () =>{
+        
+    }
+
+
+
+
+
   return (
     <div>
         <h1>ToDoList App</h1>
@@ -31,7 +43,13 @@ const ToDoList = () => {
         <button onClick={handleAddTask}>Add task</button>
         <ol>
             {taskList.map((t, index) => ( 
-                  <li key={index}>{t}</li>
+                  <li key = {index}>{t}
+                  <input type ='checkbox'
+                         onChange = {handleStrikeText}
+                  />
+                  <button onClick = {handleDeleteTask}>delete</button>
+                    
+                  </li>
                   
             ))}
 
