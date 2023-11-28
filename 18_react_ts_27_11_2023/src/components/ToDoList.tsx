@@ -16,14 +16,33 @@ const ToDoList = () => {
         
     }
 
-    const handleDeleteTask = (index :any) : void => { // ???  как правильно задать тип(почему number  не подходит)
+    const handleDeleteTask = (index : number) : void => { 
         const copyTaskList = [...taskList];
         copyTaskList.splice(index,1);
         setTaskList(copyTaskList)
         
     }
 
-    const handleStrikeText = () =>{
+    const handleStrikeText = (e : ChangeEvent<HTMLInputElement>) : void =>{
+        //              checkBox        предыдущий элемент(li)
+        const liElement = e.target.previousElementSibling as HTMLLIElement;
+
+
+        // as HTMLLIElement: это TypeScript-специфичная часть, которая говорит компилятору, что мы уверены, 
+        // что предыдущий элемент — это HTMLLIElement (элемент списка). Это делается для того, 
+        // чтобы избежать ошибок компиляции
+
+
+
+    if (e.target.checked && liElement) {
+        liElement.style.textDecoration = 'line-through';
+
+        }else if(liElement)  {
+            liElement.style.textDecoration = 'none'
+        }
+
+        
+       
         
     }
 
@@ -43,14 +62,17 @@ const ToDoList = () => {
         <button onClick={handleAddTask}>Add task</button>
         <ol>
             {taskList.map((t, index) => ( 
-                  <li key = {index}>{t}
+                <div key = {index} style={{ display: 'flex', alignItems: 'center' }}>
+                    
+                  <li >{t} </li>
+                  
                   <input type ='checkbox'
                          onChange = {handleStrikeText}
+                        
                   />
-                  <button onClick = {handleDeleteTask}>delete</button>
-                    
-                  </li>
-                  
+                   
+                  <button onClick={() => handleDeleteTask(index) }>delete</button> 
+                </div>
             ))}
 
         </ol>
