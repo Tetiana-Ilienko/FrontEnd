@@ -31,7 +31,13 @@ const ToDoList = () => {
         <button onClick={handleAddTask}>Add task</button>
         <ol>
             {taskList.map((t, index) => ( 
-                  <li key={index}>{t}</li>
+                <ToDo 
+                       taskName={t.name} 
+                       index={index} 
+                       done={check}
+                       remove={handleRemuveTask}
+                       isDone ={handleIsDone}
+                />
                   
             ))}
 
