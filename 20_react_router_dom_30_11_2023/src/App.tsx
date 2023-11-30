@@ -4,9 +4,8 @@ import Users from './components/Users';
 import Posts from './components/Posts';
 import Todos from './components/Todos';
 import Layout from './components/Layout';
-
-
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Commentes from './components/Commentes';
 
 
 function App() {
@@ -19,11 +18,11 @@ function App() {
 
             <Route path='/posts' element ={<Posts/>}></Route>
             <Route path='/todos' element ={<Todos/>}></Route>
+            <Route path='/commentes' element ={<Commentes/>}></Route>
+           
+
          </Route>
-       {/* <div className=" App">
-       <Posts/>
-       </div> */}
-      </Routes>
+       </Routes>
     </BrowserRouter>
   );
 }

@@ -15,7 +15,7 @@ interface IUser {
     phone: string;
 }
 const Users: React.FC = (): JSX.Element | null => {
-    const [users, setUsers] = useState<IUser[] | null>(null)
+    const [users, setUsers] = useState<IUser[] | null>(null);
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())

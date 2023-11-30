@@ -13,6 +13,10 @@ const Layout = () => {
         <li>
             <Link to='/todos'>Todos</Link>
         </li>
+        <li>
+            <Link to='/commentes'>Comments</Link>
+        </li>
+
 
         <Outlet />
     </ul>
