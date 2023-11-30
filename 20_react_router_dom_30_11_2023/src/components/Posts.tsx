@@ -24,7 +24,7 @@ const Posts: React.FC = (): JSX.Element | null => {
            
         <ul> 
             { posts &&
-            
+          //          post  
         posts.map( ({body, title},index) =>(
             <Post key ={index} body = {body} title= {title}/>
               

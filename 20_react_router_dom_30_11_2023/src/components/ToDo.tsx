@@ -10,7 +10,7 @@ interface IProps {
 
 const Todo: React.FC<IProps> = (props) => {
     const { done: check, index, isDone, remove, taskName } = props;
-   // console.log(check, index, isDone, remove, taskName);
+    console.log(check, index, isDone, remove, taskName);
     
   return (
     <li className='task'>
@@ -29,3 +29,4 @@ const Todo: React.FC<IProps> = (props) => {
 };
 
 export default Todo;
+

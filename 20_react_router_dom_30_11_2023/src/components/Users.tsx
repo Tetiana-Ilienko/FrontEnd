@@ -26,7 +26,7 @@ const Users: React.FC = (): JSX.Element | null => {
     }
   return (
     <div>
-        <h1>USers List</h1>
+        <h1>Users List</h1>
         <ul>
         {users.map(({company,id,name,phone}, i) => (
             <User key = {i} company = {company}  id = {id}  name = {name}  phone = {phone} i = {i}/>
