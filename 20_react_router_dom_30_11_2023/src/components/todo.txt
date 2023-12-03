@@ -4,8 +4,8 @@ interface IProps {
     taskName: string,
     index: number,
     done: boolean,
-   // remove: (index: number) => void;
-   // isDone: (e: ChangeEvent<HTMLInputElement>) => void;
+    // remove: (index: number) => void;
+    // isDone: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Todo: React.FC<IProps> = (props) => {
@@ -23,10 +23,9 @@ const Todo: React.FC<IProps> = (props) => {
         id="isDone"
         onChange={() => {}}
       />
-      <button onClick={() =>{}}>Remove</button>
+      <button onClick={() => {}}>Remove</button>
     </li>
   );
 };
 
 export default Todo;
-

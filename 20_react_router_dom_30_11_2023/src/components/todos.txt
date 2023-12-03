@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Todo from "./Todo";
 
-
 interface ITodo {
   userId: number;
   id: number;
@@ -24,7 +23,7 @@ const Todos = () => {
         {
             todoList && 
             todoList.map((todo, index) => (
-              <Todo key={index} done={todo.completed} index={index} taskName={todo.title}/>
+                <Todo key={index} done={todo.completed} index={index} taskName={todo.title}/>
             ))          
         }
     </>
