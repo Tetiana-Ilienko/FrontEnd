@@ -25,14 +25,14 @@ const Users: React.FC = (): JSX.Element | null => {
         return null;
     }
   return (
-    <div>
+    <ul>
         <h1>Users List</h1>
         <ul>
         {users.map(({company,id,name,phone}, i) => (
             <User key = {i} company = {company}  id = {id}  name = {name}  phone = {phone} i = {i}/>
         ))}
         </ul>
-    </div>
+    </ul>
   )
 }
 export default Users
