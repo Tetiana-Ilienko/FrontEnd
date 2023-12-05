@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { ChangePageContext } from '../App';
+import { FullPageContext } from '../App';
 
 interface IProps{
   itemTitle:string;
@@ -8,9 +8,10 @@ interface IProps{
 
 const NavItem:React.FC<IProps> = ({ itemTitle, changePage }) => {
   // 3. Принятие переданной в контексте информации
-  const myContextFunction = useContext(ChangePageContext)
+  //const myContextFunction = useContext(ChangePageContext);
+  const {change} = useContext(FullPageContext);
     return(
-       <li className="commonButton" onClick = {() => {myContextFunction(itemTitle)}}>{itemTitle}</li>)
+       <li className="commonButton" onClick = {() => {change(itemTitle)}}>{itemTitle}</li>)
   };
 
 export default NavItem

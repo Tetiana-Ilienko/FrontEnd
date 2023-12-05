@@ -5,13 +5,14 @@ import StarWars from '../pages/StarWars';
 import Contact from '../pages/Contact';
 import Home from '../pages/Home';
 import { useContext } from 'react';
-import { PageContext } from '../App';
+import { FullPageContext, PageContext } from '../App';
 
 const Main: React.FC<{ currentPage: string }> = ({ currentPage }) => {
 
-    const page = useContext(PageContext);
+   // const page = useContext(PageContext);
+    const fullPage = useContext(FullPageContext);
 
-    switch (page) {
+    switch (fullPage.page) {
         case navItems[1]:
             return <AboutMe />
 
