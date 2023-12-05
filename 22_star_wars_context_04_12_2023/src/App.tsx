@@ -7,7 +7,8 @@ import { navItems } from './components/utils';
 
 
 // 1. Создание контекста 
-export const ChangePageContext = createContext((currentPage: string) =>  {})
+export const ChangePageContext = createContext((currentPage: string) => { });
+export const PageContext = createContext('');
 
 
 function App() {
@@ -17,11 +18,13 @@ function App() {
 
   return (
     <>
-    {/* 2. Передача контекста */}
-      <ChangePageContext.Provider value ={changePage}>
-        <Header changePage={changePage} />
-        <Main currentPage={currentPage} />
-        <Footer />
+      {/* 2. Передача контекста */}
+      <ChangePageContext.Provider value={changePage}>
+        <PageContext.Provider value={currentPage}>
+          <Header changePage={changePage} />
+          <Main currentPage={currentPage} />
+          <Footer />
+        </PageContext.Provider>
       </ChangePageContext.Provider>
     </>
   );
