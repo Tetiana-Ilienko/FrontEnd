@@ -4,11 +4,16 @@ import './App.css';
 //import Sandwich from './components/Sandwich';
 import Books from './components/Books';
 
+import BooksPage from './components/BooksPage';
+
 function App() {
   return (
     //<Counter />
     //<Sandwich />
-    <Books/>
+    <>
+      <Books />
+      <BooksPage />
+    </>
   );
 }
 

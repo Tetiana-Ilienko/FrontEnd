@@ -1,7 +1,7 @@
 
 type Book = {
     title: string,
-    year: number,
+    year: string,
     author: string
 }
 

@@ -6,7 +6,7 @@ const initialState: IBookState = {
     books: [
         {
             isbn: '1', title: 'Harry Potter',
-            author: 'J.K. Rowling', year: 1997
+            author: 'J.K. Rowling', year: '1997'
         }
     ]
 
@@ -24,8 +24,15 @@ export default function booksReducer(state = initialState,
             // используем метод filter(), котоый работает с копием массива state. и создает новый массив, без книги с
             // с указанным индексом
 
-        // case 'books/aditTitle':
-        //     return;
+        case 'books/aditTitle':
+            return{...state, books: state.books.map(book => {
+                if(book.isbn === action.payload.isbn){
+                    return{...book, title: action.payload.title}
+                }
+
+
+                return book;
+            })};
 
         default:
             return state;
