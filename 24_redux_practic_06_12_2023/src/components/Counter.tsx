@@ -15,6 +15,8 @@ const Counter: React.FC = (): JSX.Element => {
         dispatch({ type: 'counter/plus', payload: 1 })
     }
 
+    
+
 
 
 

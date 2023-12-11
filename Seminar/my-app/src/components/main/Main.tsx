@@ -4,7 +4,9 @@ import { MainWrapper } from './styles'
 const Main = () => {
   return (
     <MainWrapper>
-        <p>Main</p>
+        <p>
+          {/* lorem*200 //  заполнить экран*/}
+        </p>
     </MainWrapper>
   )
 }

@@ -1,29 +1,33 @@
 import React from 'react';
-import { HeaderWrapper } from "./styles";
+import { ElementsWrapper, HeaderWrapper, ListWrapper, LoginWrapper, NavWrapper } from "./styles";
 
 const Header = () => {
   return (
     <HeaderWrapper>
-      <nav>
-        <ul>
-          <a href="">
-            <li>Main page</li>
-          </a>
-          <a href="">
-            <li>Info</li>
-          </a>
-          <a href="">
-            <li>Profile</li>
-          </a>
+      <NavWrapper>
+        <ListWrapper>
+          <li>
+            <ElementsWrapper href="">Main page</ElementsWrapper>
+          </li>
+
+          <li>
+
+            <ElementsWrapper href="">Info</ElementsWrapper>
+          </li>
+          <li>
+            <ElementsWrapper href="">Profile</ElementsWrapper>
+          </li>
 
 
-        </ul>
 
-      </nav>
-      <div>
-        <a href=""></a>
+        </ListWrapper>
 
-      </div>
+      </NavWrapper>
+      <LoginWrapper>
+        <ElementsWrapper href="">Login</ElementsWrapper>
+        <ElementsWrapper href="">Registration</ElementsWrapper>
+
+      </LoginWrapper>
 
     </HeaderWrapper>
   )
