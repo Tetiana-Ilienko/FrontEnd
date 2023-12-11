@@ -13,9 +13,9 @@ export const sandwichSlice = createSlice({
     reducers: {
 
         addIngredient: (state, action: PayloadAction<string>) => {
-            state.ingredients = `${state.ingredients} ${action.payload}`
+            state.ingredients = `${state.ingredients}${action.payload} `
         },
-         : (state, action: PayloadAction<string>) => {
+        removeIngredient: (state, action: PayloadAction<string>) => {
             state.ingredients = ''
 
         }
