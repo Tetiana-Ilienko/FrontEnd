@@ -23,3 +23,19 @@
   font-weight: bold;
   
 }
+
+.square.X{
+  color: red;
+}
+
+.square.O{
+  color: blue;
+}
+.controls{
+  margin-top:  20px;
+}
+
+.result{
+  margin-top: 10px;
+  font-weight: bold;
+}
