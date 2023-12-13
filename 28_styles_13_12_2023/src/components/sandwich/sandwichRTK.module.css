@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    border: 3px solid;
+    width: 50%;
+    box-sizing: border-box;
+    background-color: beige;
+
+}
+
+.button{
+    margin: 5px 5px 0 0;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(193, 201, 208);
+
+}
+
+.header{
+    border: 1px solid;
+    
+}

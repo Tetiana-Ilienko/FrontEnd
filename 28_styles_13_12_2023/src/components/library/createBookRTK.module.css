@@ -1,0 +1,28 @@
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid;
+    background-color: aqua;
+   width: 50%;
+   box-sizing: border-box;
+
+}
+
+.buttonAddBook{
+    background-color: rgb(19, 135, 237);
+    color: aqua;
+    border-radius: 3px;
+    border: none;
+    width: 100px;
+
+}
+
+.form{
+    display: flex;
+  justify-content: space-around;
+  
+  box-sizing: border-box;
+  
+
+}
