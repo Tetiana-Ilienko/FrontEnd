@@ -12,16 +12,12 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-
-
         <Route path='/' element={<Layout />}>
           <Route index  element={<Home />}/>
           <Route path='/counter'  element={<CounterRTK />}/>
-
           <Route path='/sandwich' element ={<SandwichRTK/>}/>
           <Route path='/library' element={<CreateBookRTK />}/>
         </Route>
-
       </Routes>
     </BrowserRouter>
   )
