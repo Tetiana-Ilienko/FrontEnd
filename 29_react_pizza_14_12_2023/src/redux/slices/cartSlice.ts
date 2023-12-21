@@ -17,12 +17,12 @@ export const cartSlice = createSlice({
     reducers: {
 
         addToCart: (state, action) => {
-            const findeItem = state.items.find(
+            const findItem = state.items.find(
                 (item) => item.id === action.payload.id
             );
 
-            if (findeItem) {
-                findeItem.count++;
+            if (findItem) {
+                findItem.count++;
             } else {
                 state.items.push({
                     ...action.payload,

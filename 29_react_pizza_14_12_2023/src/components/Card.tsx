@@ -3,6 +3,7 @@ import { Item, selectItemsData, setItem } from '../redux/slices/itemsSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, selectCartItemById } from '../redux/slices/cartSlice'
 import { selectFilter } from '../redux/slices/filterSlice'
+import ParamsBlock from './ParamsBlock'
 
 const Card: React.FC<Item> = (cardItem, { id, info, images, price, rating, title, sizes, types }) => {
   const counter = useSelector(selectCartItemById(id));
@@ -22,7 +23,7 @@ const Card: React.FC<Item> = (cardItem, { id, info, images, price, rating, title
         <h2 onClick={() => dispatch(setItem(cardItem))}>
             {title}
         </h2>
-
+          <ParamsBlock className ='card__params-block' types={types} sizes = {sizes}/>
         <div>
             <span>от {price} ₽</span>
             <button
